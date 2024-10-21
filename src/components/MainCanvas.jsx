@@ -2,6 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Color } from "three";
 import { Meshes } from "./Meshes";
+import { Lights } from "./Lisht";
 
 export const MainCanvas = () => {
   return (
@@ -34,6 +35,7 @@ export const MainCanvas = () => {
         shadow-mapSize-width={4096}
         shadow-mapSize-height={4096}
       />
+      <Lights />
       <Meshes />
     </Canvas>
   );
