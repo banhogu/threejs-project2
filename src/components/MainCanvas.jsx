@@ -1,5 +1,8 @@
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
+import { Meshes } from "./Meshes";
+import { Lights } from "./Lights";
+import { Dancer } from "./Dancer";
 
 export const MainCanvas = () => {
   return (
@@ -18,10 +21,9 @@ export const MainCanvas = () => {
       }}
       scene={{ background: new THREE.Color(0x000000) }} // 매번 리렌더되므로, 지양해야할 패턴
     >
-      <Controls />
       <Lights />
       <Meshes />
-      <GLBModel />
+      <Dancer />
     </Canvas>
   );
 };
